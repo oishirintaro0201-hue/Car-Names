@@ -9,6 +9,26 @@
 @media(max-width:480px){.choices{grid-template-columns:1fr}.choice{min-height:64px;display:flex;justify-content:space-between;align-items:center;gap:12px}.choice b{font-size:16px}.choice small{flex-shrink:0;font-size:10px}.input-grid{gap:10px}.badge{font-size:9px}.photo-dialog h2{font-size:19px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 .emblem-open img{padding:40px;height:260px}.settings select:disabled{background:#eef1eb;color:#78887d;cursor:not-allowed}@media(max-width:760px){.emblem-open img{height:220px;padding:32px}}
 .name-learning{margin:20px 0}.name-origin,.series-guide,.size-family{background:#fff;border:1px solid #cfdedb;border-radius:14px;padding:16px;margin:12px 0}.name-learning h4{margin:0 0 9px;color:#14544a;font-size:16px}.name-learning p{margin:8px 0;line-height:1.8}.name-learning a{font-size:12px;overflow-wrap:anywhere}.series-flow{font-size:clamp(16px,3.9vw,20px);font-weight:800;line-height:1.9;color:#164f45}.naming-caution,.naming-source{font-size:12px;color:#52615e}.size-family-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.size-family-row{padding:10px;background:#f2f6f5;border-radius:8px;display:flex;flex-direction:column;gap:5px}.size-family-row.is-current{background:#d9eee7;outline:2px solid #297864}.size-family-row span{font-size:13px}.size-family small{display:block;margin-top:10px;color:#61716c}@media(max-width:380px){.size-family-list{grid-template-columns:1fr}.name-origin,.series-guide,.size-family{padding:12px}}#feedback{scroll-margin-top:12px}button:disabled{opacity:.5;cursor:not-allowed}.price-learning{margin:16px 0;padding:16px;border:1px solid #cfdedb;background:#fff;border-radius:14px}.price-learning h4{margin:0 0 12px}.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.price-grid div{padding:12px;background:#f2f6f5;border-radius:10px}.price-grid b{display:block;font-size:22px}.price-learning small{display:block;font-size:11px;line-height:1.8;margin-top:8px}.price-learning a{font-size:12px}.used-generation{margin:12px 0;padding:12px;background:#edf4e7;border-radius:10px;font-size:12px}.used-generation p{margin:4px 0;line-height:1.7}.library-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:20px 0 8px}.library-filters .field{min-width:0;margin:0}.library-filters select{width:100%;min-height:46px;font-size:16px}.library-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:8px 0 14px}.library-meta p{margin:0;font-weight:700;color:#14544a}.library-meta button{min-height:44px}.number-guide{font-size:12px;color:#52615e;margin-bottom:16px}.number-guide p{line-height:1.8}.number-guide a{overflow-wrap:anywhere}#library table{min-width:820px}@media(max-width:600px){.library-filters{grid-template-columns:1fr;gap:12px}.library-meta{align-items:center}.library-meta button{padding:10px 12px}}
+
+/* Keep phone filters aligned and contain native select widths. */
+.settings select,.library-filters select{min-width:0;max-width:100%;display:block}
+@media(max-width:760px){
+ .settings,.library-filters{grid-template-columns:minmax(0,1fr);width:100%;min-width:0}
+ .settings .field,.library-filters .field{width:100%;min-width:0}
+ .settings select,.library-filters select,#library .search{width:100%;max-width:100%;min-width:0}
+ #library{min-width:0}
+ #library table{min-width:0;width:100%;max-width:100%}
+ #library .table-wrap{min-width:0;max-width:100%}
+ #library td:nth-child(4){grid-column:1/-1;grid-row:3;font-size:12px}
+ #library td:nth-child(4)::before{content:'ナンバー区分'}
+ #library td:nth-child(5){grid-column:1;grid-row:4}
+ #library td:nth-child(5)::before{content:'全幅'}
+ #library td:nth-child(6){grid-column:2;grid-row:4;margin-top:0}
+ #library td:nth-child(6)::before{content:'全長';display:block;font-size:11px;color:#597165;margin-top:4px}
+ #library td:nth-child(7){grid-column:1/-1;grid-row:5;overflow-wrap:anywhere}
+ #library .library-meta{align-items:stretch}
+ #library .library-meta button{width:100%}
+}
 </style></head><body>
 <header><div class="brand">▣ GARAGE SENSE</div><span class="badge">不動産営業のための車種・寸法クイズ</span></header>
 <main><div class="intro"><div><div class="eyebrow">CAR SIZE TRAINING / 01</div><h1>車名を聞いたら、<br>サイズが浮かぶ。</h1><p class="muted">車庫のご相談に備えて、全幅と全長の感覚を身につけよう。</p></div><div class="stats"><strong id="total">0</strong> 車種<br><small id="composition"></small><br><small id="lifetime"></small></div></div>
